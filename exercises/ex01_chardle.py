@@ -5,7 +5,7 @@ __author__ = "730486658"
 chardle_word: str = input("Enter a 5-character word: ")
 
 chardle_word
-if(len(chardle_word) != 5):
+if (len(chardle_word ) != 5):
     print("Error: Word must contain 5 characters")
     exit()
 
