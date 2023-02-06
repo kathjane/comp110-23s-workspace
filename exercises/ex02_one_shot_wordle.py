@@ -1,4 +1,4 @@
-"""EX02: One shot wordle"""
+"""EX02: One shot wordle."""
 
 __author__ = "730486658"
 
@@ -14,14 +14,14 @@ result: str = ""
 
 # make sure word is the right amount of letters
 while (len(word_guess) != len(secret_word)):
-    word_guess: str = input(f"That was not {len(secret_word)} Letters! Try again: ")
+    word_guess = input(f"That was not {len(secret_word)} Letters! Try again: ")
 
 # while loop to check all letters
 while (letter_idx < len(secret_word)):
     letter_anywhere: bool = False
     compare_idx: int = 0
     # if the letter is in the right spot as the secret word print a green box
-    if(secret_word[letter_idx] == word_guess[letter_idx]):
+    if (secret_word[letter_idx] == word_guess[letter_idx]):
         result = result + GREEN_BOX
     else:
         # check if the letter is anywhere in the word
@@ -30,7 +30,7 @@ while (letter_idx < len(secret_word)):
                 letter_anywhere = True
             else:
                 compare_idx = compare_idx + 1 
-        if letter_anywhere == True:
+        if letter_anywhere is True:
             result = result + YELLOW_BOX
         else:
             result = result + WHITE_BOX  
@@ -40,6 +40,6 @@ print(result)
 
 # check to see if the secret word is right
 if (word_guess == secret_word):
-     print("Woo! You got it! ")
+    print("Woo! You got it! ")
 else:
     print("Not quite. Play again soon! ")
